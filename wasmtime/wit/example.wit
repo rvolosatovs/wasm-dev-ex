@@ -1,0 +1,5 @@
+package devex:app@0.1.0;
+
+world app {
+    export wasi:http/incoming-handler@0.2.0-rc-2023-12-05;
+}

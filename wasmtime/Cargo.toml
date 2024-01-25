@@ -1,0 +1,27 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+exclude = [
+    "hello-wasi-http"
+]
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "component:app"
+
+[package.metadata.component.target.dependencies]
+"wasi:http" = { path = "wit/deps/http" }
+"wasi:clocks" = { path = "wit/deps/clocks" }
+"wasi:io" = { path = "wit/deps/io" }
+"wasi:random" = { path = "wit/deps/random" }
+"wasi:cli" = { path = "wit/deps/cli" }
+"wasi:filesystem" = { path = "wit/deps/filesystem" }
+"wasi:sockets" = { path = "wit/deps/sockets" }
+
+[dependencies]
+cargo-component-bindings = "0.6.0"

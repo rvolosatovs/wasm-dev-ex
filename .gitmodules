@@ -1,0 +1,3 @@
+[submodule "wasmtime-hello-http"]
+	path = wasmtime/hello-wasi-http
+	url = https://github.com/sunfishcode/hello-wasi-http
